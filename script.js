@@ -31,3 +31,24 @@ document.addEventListener("DOMContentLoaded", function() {
     });
   });
   
+  document.addEventListener("DOMContentLoaded", function() {
+    // Função para lidar com o login
+    const loginForm = document.getElementById("loginForm");
+    const loginMessage = document.getElementById("loginMessage");
+  
+    loginForm.addEventListener("submit", function(event) {
+      event.preventDefault();
+  
+      const matricula = loginForm.matricula.value;
+      const senha = loginForm.senha.value;
+  
+      // Exemplo básico de validação de login
+      // Aqui, substitua com a lógica de autenticação real
+      if (matricula === "admin" && senha === "1234") {
+        window.location.href = "index.html";
+      } else {
+        loginMessage.textContent = "Matrícula ou senha incorreta.";
+      }
+    });
+  });
+  
